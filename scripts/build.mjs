@@ -37,6 +37,7 @@ html = html.replace('<!--SECURITY_POLICY-->', `<meta http-equiv="Content-Securit
 await writeFile('docs/index.html', html);
 await writeFile('docs/404.html', html);
 await copyFile('public/brand-mark.svg', 'docs/assets/brand-mark.svg');
+await copyFile('public/CNAME', 'docs/CNAME');
 await writeFile('docs/robots.txt', 'User-agent: *\nDisallow: /\n');
 await writeFile('docs/.nojekyll', '');
 console.log('Triviadviento preparado en docs/ · sin demos ni mapas de código fuente.');

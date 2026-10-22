@@ -8,7 +8,7 @@ Un calendario de retos navideños entre amigos. Del 1 al 25 de diciembre de 2026
 
 GitHub Pages publica la carpeta `docs/` de la rama `main`. La dirección del proyecto es:
 
-https://sebastian1999-hub.github.io/Triviadviento/
+https://triadviento.com/
 
 ## Desarrollo
 
