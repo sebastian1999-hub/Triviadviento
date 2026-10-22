@@ -15,7 +15,7 @@ const config = publicConfig(env);
 await mkdir('docs/assets', { recursive: true });
 // Clean only generated files directly inside the fixed assets directory.
 for (const file of await readdir('docs/assets')) {
-  if (/^(app-[a-f0-9]+\.(js|css)|santa-sleigh\.gif)$/.test(file)) await unlink(`docs/assets/${file}`);
+  if (/^(app-[a-f0-9]+\.(js|css)|santa-sleigh\.gif|brand-mark\.svg)$/.test(file)) await unlink(`docs/assets/${file}`);
 }
 const result = await build({ entryPoints: ['src/main.js'], bundle: true, minify: true, sourcemap: false,
   write: false, outdir: 'docs/assets', target: 'es2020', legalComments: 'none', charset: 'utf8',
@@ -36,7 +36,7 @@ html = html.replace('<!--SECURITY_POLICY-->', `<meta http-equiv="Content-Securit
   .replace('<!--SCRIPT-->', `<script type="module" src="${assets.js}"></script>`);
 await writeFile('docs/index.html', html);
 await writeFile('docs/404.html', html);
-await copyFile('public/santa-sleigh.gif', 'docs/assets/santa-sleigh.gif');
+await copyFile('public/brand-mark.svg', 'docs/assets/brand-mark.svg');
 await writeFile('docs/robots.txt', 'User-agent: *\nDisallow: /\n');
 await writeFile('docs/.nojekyll', '');
 console.log('Triviadviento preparado en docs/ · sin demos ni mapas de código fuente.');

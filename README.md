@@ -34,7 +34,7 @@ El build genera `docs/`, con JavaScript y CSS minimizados, nombres de archivos c
 ## Estructura
 
 - `src/`: interfaz editable y estilos.
-- `public/`: GIF del trineo; se conserva su orientación hacia la izquierda.
+- `public/`: emblema de calendario navideño, compartido por la cabecera y el favicon.
 - `scripts/`: build, validación de configuración pública y visor local.
 - `tests/`: controles de seguridad de la publicación.
 - `docs/`: único contenido destinado a GitHub Pages.
